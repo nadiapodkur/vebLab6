@@ -1,9 +1,4 @@
 <?php
-/**
- * Save Toasts API Endpoint
- * Receives POST request with JSON data and saves to file
- */
-
 // CORS headers for local development
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST, OPTIONS");
