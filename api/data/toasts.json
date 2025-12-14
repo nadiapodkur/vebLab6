@@ -1,0 +1,23 @@
+{
+    "timestamp": 1765678239000,
+    "toasts": [
+        {
+            "id": "toast-1-1765678225195",
+            "title": "qwe",
+            "message": "qwe",
+            "type": "success",
+            "position": "top-right",
+            "duration": 5000,
+            "autoHide": true
+        },
+        {
+            "id": "toast-2-1765678226823",
+            "title": "gkjhgk",
+            "message": ";nkj",
+            "type": "info",
+            "position": "top-left",
+            "duration": 5000,
+            "autoHide": true
+        }
+    ]
+}

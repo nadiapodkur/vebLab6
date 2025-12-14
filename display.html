@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Display - Lab 6</title>
+    <link rel="stylesheet" href="original.css">
+    <link rel="stylesheet" href="css/toasts.css">
+</head>
+<body>
+    <div class="whole_body">
+        <div class="left_section">
+            <header class="one">
+                <h1 style="float: right; padding: 3%; font-family: myCursive; font-size: 4vw; color: white;">Toast Display</h1>
+            </header>
+            <div class="tree">
+                <div class="toast-display">
+                    <h2>Toast Notifications Display</h2>
+                    <p>This page displays toasts saved from the editor. It automatically checks for updates every 5 seconds.</p>
+
+                    <div class="refresh-status">
+                        <span class="refresh-indicator"></span>
+                        <span>Auto-refresh: <strong id="refreshStatus">Active</strong></span>
+                        <span> | Last update: <span id="lastUpdate">Never</span></span>
+                        <span> | Toasts loaded: <span id="toastCount">0</span></span>
+                    </div>
+
+                    <div class="trigger-area">
+                        <h3>Trigger Toasts</h3>
+                        <p>Click buttons below to show the saved toast notifications:</p>
+                        <div id="triggerButtons" class="trigger-buttons">
+                            <!-- Trigger buttons will be generated here -->
+                        </div>
+                        <button type="button" class="btn btn-primary" id="btnShowAll" style="margin-top: 15px;">Show All Toasts</button>
+                    </div>
+
+                    <div id="toastPreviewArea" class="toast-preview-area" style="margin-top: 20px;">
+                        <div class="no-toasts-message">
+                            <p>No toasts loaded yet. Create some on the Editor page!</p>
+                        </div>
+                    </div>
+
+                    <a href="index.html" class="nav-link">&larr; Back to Editor</a>
+                </div>
+            </div>
+            <footer class="four">
+                <p style="color: white; font-family: myCursive; font-size: xx-large; padding-left: 4%;">Lab 6 - Frontend-Backend Interaction</p>
+            </footer>
+        </div>
+
+        <div class="right_section">
+            <div class="two">
+                <ul style="font-size: xx-large; font-family: cursive;">
+                    <li><a href="index.html" style="color: black;">Editor</a></li>
+                    <li><a href="display.html" style="color: black;">Display</a></li>
+                </ul>
+            </div>
+            <div class="five">
+                <h2 style="font-family: myCursive; padding: 5%; font-size: xx-large; position: relative;">Variant 16: Toasts</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast containers for all positions -->
+    <div id="toastContainerTopRight" class="toast-container top-right"></div>
+    <div id="toastContainerTopLeft" class="toast-container top-left"></div>
+    <div id="toastContainerBottomRight" class="toast-container bottom-right"></div>
+    <div id="toastContainerBottomLeft" class="toast-container bottom-left"></div>
+
+    <script src="js/display.js"></script>
+</body>
+</html>

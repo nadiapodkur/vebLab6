@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Editor - Lab 6</title>
+    <link rel="stylesheet" href="original.css">
+    <link rel="stylesheet" href="css/toasts.css">
+</head>
+<body>
+    <div class="whole_body">
+        <div class="left_section">
+            <header class="one">
+                <h1 style="float: right; padding: 3%; font-family: myCursive; font-size: 4vw; color: white;">Toast Editor</h1>
+            </header>
+            <div class="tree">
+                <div class="toast-editor">
+                    <h2>Create Toast Notifications</h2>
+                    <p>Configure your toast notifications below. Click "Add Toast" to create a new toast item.</p>
+
+                    <div id="toastList" class="toast-list">
+                        <!-- Toast items will be added here dynamically -->
+                    </div>
+
+                    <div class="editor-actions">
+                        <button type="button" class="btn btn-primary" id="btnAddToast">Add Toast</button>
+                        <button type="button" class="btn btn-success" id="btnSave">Save All Toasts</button>
+                        <button type="button" class="btn btn-secondary" id="btnPreview">Preview</button>
+                    </div>
+
+                    <div id="statusMessage" class="status-message"></div>
+
+                    <a href="display.html" class="nav-link">Go to Display Page &rarr;</a>
+                </div>
+            </div>
+            <footer class="four">
+                <p style="color: white; font-family: myCursive; font-size: xx-large; padding-left: 4%;">Lab 6 - Frontend-Backend Interaction</p>
+            </footer>
+        </div>
+
+        <div class="right_section">
+            <div class="two">
+                <ul style="font-size: xx-large; font-family: cursive;">
+                    <li><a href="index.html" style="color: black;">Editor</a></li>
+                    <li><a href="display.html" style="color: black;">Display</a></li>
+                </ul>
+            </div>
+            <div class="five">
+                <h2 style="font-family: myCursive; padding: 5%; font-size: xx-large; position: relative;">Variant 16: Toasts</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast item template (hidden) -->
+    <template id="toastItemTemplate">
+        <div class="toast-item" data-toast-id="">
+            <div class="toast-item-header">
+                <span class="toast-item-number">Toast #<span class="number">1</span></span>
+                <button type="button" class="btn-delete-toast">Delete</button>
+            </div>
+
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="toast-title-input" placeholder="Enter toast title" required>
+            </div>
+
+            <div class="form-group">
+                <label>Message</label>
+                <textarea class="toast-message-input" placeholder="Enter toast message" required></textarea>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Type</label>
+                    <select class="toast-type-select">
+                        <option value="success">Success (Green)</option>
+                        <option value="error">Error (Red)</option>
+                        <option value="warning">Warning (Yellow)</option>
+                        <option value="info">Info (Blue)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Position</label>
+                    <select class="toast-position-select">
+                        <option value="top-right">Top Right</option>
+                        <option value="top-left">Top Left</option>
+                        <option value="bottom-right">Bottom Right</option>
+                        <option value="bottom-left">Bottom Left</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Duration (ms)</label>
+                    <input type="number" class="toast-duration-input" value="5000" min="1000" max="30000" step="500">
+                </div>
+
+                <div class="form-group">
+                    <label>&nbsp;</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" class="toast-autohide-input" checked>
+                        <span>Auto-hide after duration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Preview toast containers -->
+    <div id="toastContainerTopRight" class="toast-container top-right"></div>
+    <div id="toastContainerTopLeft" class="toast-container top-left"></div>
+    <div id="toastContainerBottomRight" class="toast-container bottom-right"></div>
+    <div id="toastContainerBottomLeft" class="toast-container bottom-left"></div>
+
+    <script src="js/editor.js"></script>
+</body>
+</html>
