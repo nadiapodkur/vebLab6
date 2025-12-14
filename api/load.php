@@ -1,10 +1,5 @@
 <?php
-/**
- * Load Toasts API Endpoint
- * Returns saved toasts data from JSON file
- */
 
-// CORS headers for local development
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
