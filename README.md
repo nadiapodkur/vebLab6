@@ -3,8 +3,7 @@
 ## Виконала: Надія Подкур
 **Група:** ІП-41
 **Варіант:** 16
-**Посилання на GitHub Pages:** [https://nadiapodkur.github.io/vebLab6/](https://nadiapodkur.github.io/vebLab6/)
----
+**Посилання на InfinityFree:** [[https://np.lovestoblog/](https://np.lovestoblog.com/)]
 ## 1. Завдання: Набір об'єктів «Toasts»
 
 **Об'єкт:** Набір об'єктів «Toasts» (спливаючі повідомлення).
